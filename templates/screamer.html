@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screamer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: black;
+        }
+        .screamer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename='media/screamer.gif') }}" class="screamer" alt="Screamer">
+    <audio autoplay>
+        <source src="{{ url_for('static', filename='media/scream.mp3') }}" type="audio/mpeg">
+    </audio>
+</body>
+</html> 

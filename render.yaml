@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vk-oauth-screamer
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: VK_CLIENT_ID
+        sync: false
+      - key: VK_CLIENT_SECRET
+        sync: false
+      - key: VK_REDIRECT_URI
+        sync: false 
